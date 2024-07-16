@@ -15,3 +15,20 @@ else
     Run, "C:\Program Files\totalcmd\TOTALCMD.EXE"
 }
 return
+
+#F7::  ; Hotkey: Ctrl+Alt+Q
+    if WinExist("ahk_exe devenv.exe")
+    {
+        WinActivate
+        Sleep, 100
+        Send, {F5}
+    }
+    else
+    {
+        MsgBox, Visual Studio is not running.
+    }
+return
+
+#F6::Run, chrome, https://mail.google.com/mail/u/0/#inbox
+return
+
