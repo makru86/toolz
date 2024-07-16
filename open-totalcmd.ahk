@@ -3,7 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-^!t:: ; This defines the hotkey (Ctrl+Alt+T)
+#F1::
 if WinExist("ahk_exe totalcmd.exe")
 {
     ; If Total Commander is already running, activate it
@@ -16,7 +16,11 @@ else
 }
 return
 
-#F7::  ; Hotkey: Ctrl+Alt+Q
+
+#F2::Run, chrome, https://mail.google.com/mail/u/0/#inbox
+return
+
+#F3::  ; Hotkey: Ctrl+Alt+Q
     if WinExist("ahk_exe devenv.exe")
     {
         WinActivate
@@ -29,6 +33,4 @@ return
     }
 return
 
-#F6::Run, chrome, https://mail.google.com/mail/u/0/#inbox
-return
 
